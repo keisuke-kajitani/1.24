@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.tymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="result-enshu-scope1.html" th:action="@{/enshu-scope/input-name}" method="post">
+メールアドレス：<input type="text" name="name">
+        
+パスワード：<input type="password" name="pass">
+<button>送信</button>
+</form>
+</body>
+</html>
