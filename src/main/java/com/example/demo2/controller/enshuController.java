@@ -17,7 +17,12 @@ public class sessionScopeController{
 private HttpSession session;
 @RequestMapping("")
 public String index(){
-    return "enshu-scope-form";
+   
+  if (session.getAttribute("name") == null) {
+      return "enshu-scope-form";  
+    }
+    
+    return "redirect:/enshu-scope/home";
 }
 
 @RequestMapping("/input-name")
@@ -30,8 +35,6 @@ public String inputName(String name, String pass){
  }else{
     return "enshu-scope-form";
  }
- 
- 
 } 
 @RequestMapping("/input-age")
 public String toPage2(){
@@ -39,3 +42,5 @@ public String toPage2(){
 }
 }
 }
+
+
